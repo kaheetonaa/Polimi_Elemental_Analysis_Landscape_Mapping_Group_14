@@ -444,7 +444,7 @@ $(window).on('load', function() {
       var containerId = parseInt( location.hash.substr(1) ) - 2;
       $('#contents').animate({
         scrollTop: $('#container' + containerId).offset().top
-      }, 2000);
+      }, 0);
     }
 
     // Add Google Analytics if the ID exists
