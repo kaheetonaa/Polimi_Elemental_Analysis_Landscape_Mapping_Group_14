@@ -153,7 +153,7 @@ $(window).on('load', function() {
           L.marker([lat, lon], {
             icon: L.ExtraMarkers.icon({
               icon: 'fa-number',
-              number: c['Marker'] === 'Plain' ? '' : chapterCount,
+              number: c['Marker'] === 'Plain' ? '' : c['Marker'],//chapterCounta
               markerColor: c['Marker Color'] || 'blue'
             }),
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
@@ -444,7 +444,7 @@ $(window).on('load', function() {
       var containerId = parseInt( location.hash.substr(1) ) - 2;
       $('#contents').animate({
         scrollTop: $('#container' + containerId).offset().top
-      }, 2000);
+      }, 0);
     }
 
     // Add Google Analytics if the ID exists
